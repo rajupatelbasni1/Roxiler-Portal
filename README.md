@@ -4,14 +4,6 @@ A full-stack web application built with **Node.js, Express, PostgreSQL, and Reac
 
 ---
 
-## 🛠️ Tech Stack
-* **Frontend:** React, React Router, Axios, Vite
-* **Backend:** Node.js, Express.js, JWT Authentication, Bcrypt
-* **Database:** PostgreSQL
-
----
-# Store Rating & Management Portal - Complete Setup Guide
-
 ## 🔑 Login Credentials (Quick Access)
 
 > **Note:** All standard accounts use the password: **`Mahadev@1234`**
@@ -25,7 +17,14 @@ A full-stack web application built with **Node.js, Express, PostgreSQL, and Reac
 
 ---
 
-## 📋 Project Requirements (`requirements.txt` / Dependencies)
+## 🛠️ Tech Stack
+* **Frontend:** React, React Router, Axios, Vite
+* **Backend:** Node.js, Express.js, JWT Authentication, Bcrypt
+* **Database:** PostgreSQL
+
+---
+
+## 📋 Project Requirements & Dependencies
 
 ### Backend (`my-express-app`)
 * `express`: ^4.19.2
@@ -45,8 +44,6 @@ A full-stack web application built with **Node.js, Express, PostgreSQL, and Reac
 
 ---
 
-## 🛠️ Step-by-Step Setup & Installation Guide
-
 ## 📂 Project Directory Structure
 
 expressjsapp/
@@ -61,3 +58,4 @@ expressjsapp/
 │   ├── pages/         # Login, Signup, Dashboards
 │   └── App.jsx        # Main App & Routing
 └── vite.config.js
+
