@@ -19,7 +19,7 @@ export default function OwnerDashboard({ darkMode }) {
 
   const fetchOwnerDashboard = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/api/owner/dashboard', {
+      const res = await axios.get('https://roxiler-portal.onrender.com/api/owner/dashboard', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setDashboardData(res.data);
@@ -112,7 +112,7 @@ function PasswordUpdateSection({ darkMode }) {
   const handlePasswordUpdate = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put('http://localhost:3000/api/auth/update-password', passData, {
+      const res = await axios.put('https://roxiler-portal.onrender.com/api/auth/update-password', passData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMsg(res.data.message);

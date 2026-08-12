@@ -29,7 +29,7 @@ export default function AdminDashboard({ darkMode }) {
 
   const fetchStats = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/api/admin/dashboard/stats', {
+      const res = await axios.get('https://roxiler-portal.onrender.com/api/admin/dashboard/stats', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setStats(res.data.data);
@@ -38,7 +38,7 @@ export default function AdminDashboard({ darkMode }) {
 
   const fetchStores = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/api/stores?search=${filters.name}&sortBy=${storeSort.field}&order=${storeSort.order}`, {
+      const res = await axios.get(`https://roxiler-portal.onrender.com/api/stores?search=${filters.name}&sortBy=${storeSort.field}&order=${storeSort.order}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setStores(res.data.data);
@@ -48,7 +48,7 @@ export default function AdminDashboard({ darkMode }) {
   const fetchUsers = async () => {
     try {
       const queryParams = new URLSearchParams({ ...filters, sortBy: userSort.field, order: userSort.order }).toString();
-      const res = await axios.get(`http://localhost:3000/api/admin/users?${queryParams}`, {
+      const res = await axios.get(`https://roxiler-portal.onrender.com/api/admin/users?${queryParams}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setUsers(res.data.data);
@@ -68,7 +68,7 @@ export default function AdminDashboard({ darkMode }) {
   const handleAddStore = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3000/api/stores', storeData, {
+      const res = await axios.post('https://roxiler-portal.onrender.com/api/stores', storeData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMessage(res.data.message);
@@ -80,7 +80,7 @@ export default function AdminDashboard({ darkMode }) {
   const handleAddUser = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3000/api/admin/users', userData, {
+      const res = await axios.post('https://roxiler-portal.onrender.com/api/admin/users', userData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMessage(res.data.message);

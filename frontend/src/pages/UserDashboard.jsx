@@ -21,7 +21,7 @@ export default function UserDashboard({ darkMode }) {
 
   const fetchStores = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/api/stores?search=${search}`, {
+      const res = await axios.get(`https://roxiler-portal.onrender.com/api/stores?search=${search}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setStores(res.data.data);
@@ -38,7 +38,7 @@ export default function UserDashboard({ darkMode }) {
     }
 
     try {
-      const res = await axios.post('http://localhost:3000/api/ratings', {
+      const res = await axios.post('https://roxiler-portal.onrender.com/api/ratings', {
         store_id,
         rating: parseInt(ratingValue)
       }, {
@@ -143,7 +143,7 @@ function PasswordUpdateSection({ darkMode }) {
   const handlePasswordUpdate = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put('http://localhost:3000/api/auth/update-password', passData, {
+      const res = await axios.put('https://roxiler-portal.onrender.com/api/auth/update-password', passData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMsg(res.data.message);

@@ -25,7 +25,7 @@ export default function Signup({ darkMode }) {
     }
 
     try {
-      const res = await axios.post('http://localhost:3000/api/auth/signup', formData);
+      const res = await axios.post('https://roxiler-portal.onrender.com/api/auth/signup', formData);
       setMessage(res.data.message);
       setTimeout(() => navigate('/login'), 2000);
     } catch (err) {
